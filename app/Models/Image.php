@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
+
     protected $fillable = [
-        'title', 'description', 'old_name', 'path'
+        'id', 'title', 'description', 'old_name', 'path'
     ];
+
+    public $incrementing = false;
+
+    protected $keyType = 'string';
 }
