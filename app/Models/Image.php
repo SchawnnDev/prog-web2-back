@@ -8,7 +8,7 @@ class Image extends Model
 {
 
     protected $fillable = [
-        'id', 'title', 'description', 'old_name', 'path'
+        'id', 'title', 'description', 'name', 'old_name'
     ];
 
     public $incrementing = false;

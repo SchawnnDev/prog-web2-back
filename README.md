@@ -63,3 +63,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Migrer en prod:
 
 php artisan migrate --database=nom_db_dans_config
+
+créer les dossiers storage/app/images/events
+
+// si photos publiques
+php artisan images:link

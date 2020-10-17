@@ -7,7 +7,7 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 class ImageCollection extends ResourceCollection
 {
 
-    public $collects = 'App\Http\Resources\Image';
+    public $collects = 'App\Http\Resources\ImageResource';
 
     /**
      * Transform the resource collection into an array.

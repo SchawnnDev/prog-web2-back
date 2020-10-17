@@ -14,11 +14,11 @@ class CreateImagesTable extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
-            $table->string('id', 32)->unique()->primary();
-            $table->string('title');
+            $table->string('id', 64)->unique()->primary();
+            $table->string('title', 64);
             $table->text('description');
+            $table->string('name');
             $table->string('old_name');
-            $table->string('path');
             $table->timestamps();
         });
     }
