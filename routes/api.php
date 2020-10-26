@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('images', 'Api\ImageController');
+Route::apiResource('contact', 'Api\ContactController');

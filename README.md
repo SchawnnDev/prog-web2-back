@@ -68,3 +68,5 @@ créer les dossiers storage/app/images/events
 
 // si photos publiques
 php artisan images:link
+
+// ajouter son email dans le .env: CONTACT_EMAIL

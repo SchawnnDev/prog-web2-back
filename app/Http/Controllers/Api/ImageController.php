@@ -13,6 +13,10 @@ use Image as Img;
 class ImageController extends Controller
 {
 
+    /**
+     * Chemin du stockage des photos
+     * @var string
+     */
     private $photos_path;
 
     public function __construct()
@@ -52,7 +56,6 @@ class ImageController extends Controller
 
         Img::make($image)->orientate()->save($this->photos_path . '/' . $save_name);
 
-        //'id', 'title', 'description', 'old_name', 'path'
         $upload = new Image();
         $upload->id = sha1(date('YmdHis') . Str::random(32));
         $upload->title = $attributes['title'];
