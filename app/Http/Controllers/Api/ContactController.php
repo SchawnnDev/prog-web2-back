@@ -31,7 +31,7 @@ class ContactController extends Controller
     {
         $attributes = $request->validate([
             'name' => 'required|string|max:64',
-            'email' => 'required|email',
+            'email' => 'required|email:rfc,dns',
             'message' => 'required|string|max:2048'
         ]);
 
