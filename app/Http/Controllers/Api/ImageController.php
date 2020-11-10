@@ -7,6 +7,7 @@ use App\Http\Resources\ImageCollection;
 use App\Http\Resources\ImageResource;
 use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Image as Img;
 
@@ -75,7 +76,6 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        //
     }
 
     /**
@@ -98,6 +98,18 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        //
+        try {
+
+            // on supprime localement
+            Storage::delete('images/events/' . $image->name);
+
+            // on supprime de la bdd
+            $image->delete();
+
+            return new ImageResource($image);
+        } catch (\Exception $e) {
+            return $e;
+        }
+
     }
 }
