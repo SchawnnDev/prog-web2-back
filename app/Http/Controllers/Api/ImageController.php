@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\ImageCollection;
 use App\Http\Resources\ImageResource;
 use App\Models\Image;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -107,7 +108,7 @@ class ImageController extends Controller
             $image->delete();
 
             return new ImageResource($image);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return $e;
         }
 
