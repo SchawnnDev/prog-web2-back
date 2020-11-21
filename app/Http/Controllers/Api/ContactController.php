@@ -25,7 +25,7 @@ class ContactController extends Controller
      * Send mail
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return \App\Models\Mail
      */
     public function store(Request $request)
     {
