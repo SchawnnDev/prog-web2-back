@@ -8,9 +8,9 @@ ajouter automatiquement après la création de votre base de données.
 Soyez sûrs d'avoir installé les dépendances de Laravel :
 https://laravel.com/docs/7.x/installation#server-requirements
 
-##Comment démarrer le back-end ?
+## Comment démarrer le back-end ?
 
-###1. Configurer son .env
+### 1. Configurer son .env
 
 Copiez le .env.example et remplissez le.
 
@@ -20,13 +20,13 @@ N'oubliez pas de générer la clé secrète.
 php artisan key:generate
 ```
 
-###2. Effectuer la migration
+### 2. Effectuer la migration
 
 ```
 php artisan migrate --database=nom_db_dans_config
 ```
 
-###3. Effectuer le seedage (remplir la bdd)
+### 3. Effectuer le seedage (remplir la bdd)
 
 ```
 php artisan db:seed
@@ -35,13 +35,13 @@ php artisan db:seed
 Si une erreur apparait, disant que le dossier n'existe pas, essayez de
 créer vos dossiers manuellement : `storage/app/images/events`
 
-###4. Créer un lien vers les dossier
+### 4. Créer un lien vers les dossier
 
 ```
 php artisan images:link
 ```
 
-###5. Lancer l'application !
+### 5. Lancer l'application !
 
 Par défaut, le port est 8000.
 
